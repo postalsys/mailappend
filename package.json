@@ -5,7 +5,8 @@
     "main": "bin/mailappend.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build-dist": "npm run licenses && pkg --compress Brotli package.json",
+        "build-source": "rm -rf node_modules package-lock.json && npm install && npm run licenses && rm -rf node_modules package-lock.json && npm install --production && rm -rf package-lock.json",
+        "build-dist": "pkg --compress Brotli package.json && rm -rf package-lock.json && npm install",
         "licenses": "license-report --only=prod --output=table --config license-report-config.json > licenses.txt"
     },
     "repository": {
