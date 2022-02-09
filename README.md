@@ -2,6 +2,12 @@
 
 Upload email files to a folder in an IMAP server.
 
+Download `mailappend` for your platform:
+
+-   [MacOS](https://github.com/postalsys/mailappend/releases/latest/download/mailappend.pkg)
+-   [Linux](https://github.com/postalsys/mailappend/releases/latest/download/mailappend.tar.gz)
+-   [Windows](https://github.com/postalsys/mailappend/releases/latest/download/mailappend.exe)
+
 ```
 Upload an email or multiple emails to a folder in an IMAP server
 
