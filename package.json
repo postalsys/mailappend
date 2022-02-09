@@ -1,0 +1,49 @@
+{
+    "name": "mailappend",
+    "version": "1.0.0",
+    "description": "Append email files to a folder in an IMAP server",
+    "main": "bin/mailappend.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-dist": "npm run licenses && pkg --compress Brotli package.json",
+        "licenses": "license-report --only=prod --output=table --config license-report-config.json > licenses.txt"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/postalsys/mailappend.git"
+    },
+    "keywords": [
+        "IMAP",
+        "RFC822",
+        "append"
+    ],
+    "bin": {
+        "mailappend": "bin/mailappend.js"
+    },
+    "author": "Postal Systems OÜ",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/postalsys/mailappend/issues"
+    },
+    "homepage": "https://github.com/postalsys/mailappend#readme",
+    "dependencies": {
+        "dotenv": "16.0.0",
+        "imapflow": "1.0.80",
+        "minimist": "1.2.5",
+        "nodemailer": "6.7.2"
+    },
+    "devDependencies": {
+        "license-report": "4.5.0",
+        "pkg": "5.5.2"
+    },
+    "pkg": {
+        "assets": [
+            "licenses.txt",
+            "LICENSE.txt"
+        ],
+        "_targets": [
+            "node16-macos-x64"
+        ],
+        "outputPath": "ee-dist"
+    }
+}
